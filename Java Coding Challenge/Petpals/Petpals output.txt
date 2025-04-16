@@ -1,0 +1,38 @@
+--- PetPals Database Application ---
+1. Display Pet Listings
+2. Record Donation
+3. Manage Adoption Events
+0. Exit
+
+
+
+"SELECT * FROM Pets WHERE AvailableForAdoption = 1";
+
+Enter your choice: 1
+
+--- Available Pets for Adoption ---
+Pet ID: 1, Name: Jimmy, Age: 2, Breed: Labrador, Type: Dog
+Pet ID: 2, Name: Tommy, Age: 4, Breed: Persian, Type: Cat
+
+
+
+"INSERT INTO Donations (DonorName, DonationType, DonationAmount, DonationItem, DonationDate) VALUES (?, ?, ?, ?, NOW())";
+
+Enter your choice: 2
+Enter Donor Name: Ram
+Enter Donation Type (Cash/Item): Cash
+Enter Donation Amount: 5000
+Donation recorded successfully.
+
+
+"SELECT e.EventName, e.EventDate, e.Location, p.ParticipantName, p.ParticipantType FROM AdoptionEvents e " +
+                         "JOIN Participants p ON e.EventID = p.EventID";
+
+Enter your choice: 3
+
+--- Adoption Events ---
+Event: Mega Adoption Drive | Date: 2025-04-15 10:00:00 | Location: Delhi | Participant: Rohan | Type: Adopter
+Event: Pet Love Fest | Date: 2025-05-10 11:00:00 | Location: Bangalore | Participant: Priya | Type: Adopter
+Event: Rescue Meet | Date: 2025-06-20 09:30:00 | Location: Chennai | Participant: Safe Haven | Type: Shelter
+
+
